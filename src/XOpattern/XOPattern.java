@@ -35,6 +35,7 @@ public class XOPattern {
                 matrix[i][right] = c;
             right--;
 
+
             //print last row
             for(int i=right;i>=left;--i)
                 matrix[bottom][i] = c;

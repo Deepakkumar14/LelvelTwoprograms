@@ -1,7 +1,5 @@
 package XOpattern;
 
-import sun.awt.X11.XSystemTrayPeer;
-
 import java.util.Scanner;
 
 public class XOPattern {

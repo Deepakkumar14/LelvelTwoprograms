@@ -15,14 +15,11 @@ public class XOPattern {
         int right = n - 1;
         int bottom = m - 1;
         char c;
-        while (true) {
+        while (top<bottom || left<right) {
             if (top % 2 == 0)
-                c = 'X';
+                c = 'x';
             else
                 c = 'O';
-
-            if(top>bottom || left>right)
-                break;
 
             for(int i=left;i<=right;++i)
                 matrix[top][i] = c;

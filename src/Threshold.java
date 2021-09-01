@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class Threshold {
     public static void main(String[] args) {
         int[] array={5,8,10,13,6,3};
@@ -16,6 +18,7 @@ public class Threshold {
                 }
             }
         }
+        System.out.println(Arrays.toString(array));
         System.out.println(count);
     }
 }

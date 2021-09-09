@@ -11,35 +11,45 @@
         Output: 33
         Explanation: reverse(30) = 3,then 3+30
         = 33 which is palindrome.
+
+        Example 3:
+        Input n=6799
+        output=-1;
+
         */
 
 
 public class PalindromeReverse {
     public static void main(String[] args) {
-        int n=6788;
+        int n=6799;
         String bool = null;
+        int temp=0,reverse=0;
         for(int i=0;i<5;i++){
-            int output=0;
-            int temp=n;
-
-            int reverse=reverse(temp);
-            bool=checker(temp,reverse);
-
-            output=n+reverse;
-             temp =output;
-
-            int palindrome=reverse(temp);
+           temp=n;
+             reverse=reverse(temp);
             bool=checker(temp,reverse);
 
             if(bool.equals("true")){
-                System.out.println(palindrome);
+                break;
             }
-            else if(bool.equals("-1"))
-                System.out.println("-1");
-
-            n=palindrome;
+            else {
+                temp=n+reverse;
+                reverse=reverse(temp);
+                bool=checker(temp,reverse);
+                n=reverse;
+                if(bool.equals("true")){
+                    break;
+                }
+            }
+            }
+        if(bool.equals("true")){
+            System.out.println(n);
         }
-    }
+        else {
+            System.out.println(n);
+            System.out.println("-1");
+        }
+        }
     public static int reverse(int temp){
         int reverse=0;
         while(temp>0){
